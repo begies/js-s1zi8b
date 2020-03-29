@@ -3,6 +3,7 @@
 /**************************************************************/
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
+alert('login.js: ');
 
 var uiConfig = {
   callbacks: {
