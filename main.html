@@ -1,0 +1,127 @@
+<!--***********************************************************/
+// index.html
+// 
+// firebase 13COMP UI test
+// Written by Mr Bob term 1 2020
+// v1 basic UI test with CRUD actions
+/***********************************************************-->
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>TEST FIREBASE UI</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="13COMP test firebase UI">
+    <meta name="keywords" content="13COMP, test firebase UI">
+    <meta name="author" content="Mr Bob">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+	   
+    <link rel="stylesheet" href="style.css">
+   	
+    <link rel="icon" href="favicon_frog.gif" type="image/gif">
+          
+    <!-- firebase start -->
+	<!-- Load firebase localy -->
+	<!--<script src="firebase.js"></script>-->
+	
+	<link type="text/css" rel="stylesheet" 
+		  href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+	<!-- OR Add the entire Firebase JavaScript SDK -->
+    <!--<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase.js"></script>-->
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<!-- firebase end -->
+      
+    <script src="logIt_console.js"></script> 
+    <script src="db_firebaseIO.js"></script>
+    <script src="main.js"></script>
+</head>
+  
+<body class="w3-display-container"
+	  onload="db_checkConnection()">
+	<header class="w3-padding">
+		<h1 class="w3-xxxlarge w3-wide">TEST FIREBASE ACCESS</h1>
+		<h2 class="w3-large w3-wide">main.html</h2>
+		
+		<div class="w3-col m1 w3-margin-top w3-right">
+			<img class="rotate" src="favicon_frog.gif" 
+				 alt="funny frog drawing" height="42" width="42"> 
+		</div>
+    </header>
+    
+	<section class="w3-container w3-third">
+		<form class="w3-container w3-card-4 w3-small">
+			<label><p>user name</p></label>
+			<input id="i_userName"
+				   class="w3-input inputName" 
+				   type="text" required="" autofocus=""
+				   onchange="main_getUserName()">
+			<div class="w3-third">	   
+				<p class="in_line">score:</p>
+				<p id="p_userScore" class="in_line">0</p>
+			</div>
+			<div class="w3-twothird">
+				<p class="in_line">name:</p>
+				<p id="p_userName" class="in_line"></p>
+			</div>
+			
+			<input class="w3-button w3-red w3-border block setMgnPad" 
+				   type="button" 
+				   onclick="main_add2Score()" value="add 2 score">
+								   
+			<p id="name_error" class="w3-margin-top w3-cyan"></p>
+		</form>
+		
+		<div class="w3-margin-top">
+			<button class="w3-col m3 w3-button w3-round w3-block
+						   w3-ripple w3-border w3-cyan" 
+					onclick="main_create()" value="Submit">CREATE 
+			</button>
+			<button class="w3-col m3 w3-button w3-round w3-block
+						   w3-ripple w3-border w3-cyan" 
+					onclick="main_read()" value="Submit">READ 
+			</button>
+			<button class="w3-col m3 w3-button w3-round w3-block
+						   w3-ripple w3-border w3-cyan" 
+					onclick="main_update()" value="Submit">UPDATE 
+			</button>
+			<button class="w3-col m3 w3-button w3-round w3-block
+						   w3-ripple w3-border w3-margin-bottom w3-cyan" 
+					onclick="main_remove()" value="Submit">DELETE 
+			</button>
+									
+			<p class="w3-medium in_line setMgnPad">DB IO STATUS</p>			
+			<p class="in_line setMgnPad">connection:</p>
+			<p id="p_connection" class="in_line setMgnPad">waiting</p>
+			
+			<table id="db_IOResults" class="w3-table">
+				<tr>
+				  <th>create</th>
+				  <th>read</th>
+				  <th>update</th>
+				  <th>remove</th>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				</tr>
+			</table>
+			
+		</div>		
+    </section> 		
+	
+<script>
+ 
+</script>
+
+</body>
+</html>
+<!--/**********************************************************/
+//    END OF HTML
+/***********************************************************/-->

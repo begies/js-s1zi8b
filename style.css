@@ -1,0 +1,54 @@
+/*************************************************
+// firebase 13COMP UI test
+// Written by Mr Bob term 1 2020
+// v1 basic UI test with CRUD actions
+*************************************************/
+body {
+	background: url(Audi.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	font-family: tahoma;
+	font-size: 1em;
+	color: black;
+}
+
+canvas {
+	display: block;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.inputName {
+	width: 80%; 
+	height: 22px;
+}
+
+.setMgnPad {
+	margin: 0px; 
+	padding: 0px 5px;
+}
+ 
+.in_line {
+	display: inline-block;
+}
+
+.block {
+	display: block;
+}
+
+/************************************************/
+/*    END OF CSS
+/************************************************/
